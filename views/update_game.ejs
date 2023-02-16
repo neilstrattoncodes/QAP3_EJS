@@ -1,0 +1,81 @@
+<!-- include header -->
+<%- include('include/_header') %>
+<!-- /include header -->
+
+  <!-- Main Site -->
+  <main id="site-main">
+    <div class="container">
+        <div class="box-nav d-flex justify-between">
+           <div class="filter">
+               <a href="/"><i class="fas fa-angle-double-left"></i> All Games</a>
+           </div>
+        </div>
+        <div class="form-title text-center">
+            <h2 class="text-dark">Update Game</h2>
+            <span class="text-light">Use the below form to Update an Game</span>
+        </div>
+
+        <!--add game form-->
+        <!--form Handling-->
+ <form method="POST" id="update_game">
+    <div class="new_game">
+        <div class="form-group">
+            <label for="name" class="text-light">Game Name</label>
+            <input type="hidden" name="id" value="<%= game._id %>">">
+            <input type="text" name="name" value="<%= game.name %>" placeholder="Enter Game Name">
+    </div>
+        <div class="form-group">
+            <label for="desc" class="text-light">Description</label>
+            <input type="text" name="desc" value="<%= game.desc %>" placeholder="Enter Description">
+    </div>
+        <div class="form-group">
+            <label for="type" class="text-light">Game Type</label>
+            <input type="text" name="type" value="<%= game.type %>" placeholder="Enter Type">
+    </div>
+        <div class="form-group">
+            <label for="price" class="text-light">Price</label>
+            <input type="number" name="price" value="<%= game.price %>" placeholder="Enter Price">
+    </div>
+        <div class="form-group">
+            <label for="sku" class="text-light">SKU</label>
+            <input type="number" name="desc" value="<%= game.sku %>" placeholder="Enter SKU">
+    </div>
+        <div class="form-group">
+            <label for="platform" class="text-light">Platform</label>
+        <div class="radio inline">
+            <input type="radio" id="radio-2" name="platform" value="Xbox" <%= game.platform == 'Xbox' ? 'checked' : '' %>>
+            <label for="radio-2" class="text-light">Xbox</label>
+        </div>
+        <div class="radio inline">
+            <input type="radio" id="radio-3" name="platform" value="Playstation" <%= game.platform == 'Playstation' ? 'checked' : '' %>>
+            <label for="radio-3" class="text-light">Playstation</label>
+        </div>
+        <div class="radio inline">
+            <input type="radio" id="radio-4" name="platform" value="Switch" <%= game.platform == 'Switch' ? 'checked' : '' %>>
+            <label for="radio-4" class="text-light">Switch</label>
+        </div>
+    </div>
+        <div class="form-group">
+            <label for="platform" class="text-light">Status</label>
+        <div class="radio inline">
+            <input type="radio" id="radio-5" name="status" value="In Stock" <%= game.status == 'In Stock' ? 'checked' : '' %>>>
+            <label for="radio-5" class="text-light">In Stock</label>
+        </div>
+        <div class="radio inline">
+            <input type="radio"id="radio-6" name="status" value="Out of Stock" <%= game.status == 'Out of Stock' ? 'checked' : '' %>>>
+            <label for="radio-6" class="text-light">Out of Stock</label>
+        </div>
+    </div>
+
+    <div class="form-group">
+        <button type="submit" class="btn text-dark update">Save</button>
+    </div>
+</form>
+     
+    </div>
+</main>
+<!-- /Main Site -->
+
+<!-- include footer -->
+<%- include('include/_footer') %>
+<!-- /include footer -->

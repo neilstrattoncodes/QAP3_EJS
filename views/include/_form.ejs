@@ -1,0 +1,56 @@
+<!--form Handling-->
+<form action="/api/games" method="POST" id="add_game">
+  <div class="new_game">
+    <div class="form-group">
+      <label for="name" class="text-light">Game Name</label>
+      <input type="hidden" name="id" value="" />
+      <input type="text" name="name" value="" placeholder="Enter Game Name" />
+    </div>
+    <div class="form-group">
+      <label for="desc" class="text-light">Description</label>
+      <input type="text" name="desc" value="" placeholder="Enter Description" />
+    </div>
+    <div class="form-group">
+      <label for="type" class="text-light">Game Type</label>
+      <input type="text" name="type" value="" placeholder="Enter Type" />
+    </div>
+    <div class="form-group">
+      <label for="price" class="text-light">Price</label>
+      <input type="number" name="price" value="" placeholder="Enter Price" />
+    </div>
+    <div class="form-group">
+      <label for="sku" class="text-light">SKU</label>
+      <input type="number" name="desc" value="" placeholder="Enter SKU" />
+    </div>
+    <div class="form-group">
+      <label for="platform" class="text-light">Platform</label>
+      <div class="radio inline">
+        <input type="radio" id="radio-2" name="platform" value="Xbox" />
+        <label for="radio-2" class="radio-label">Xbox</label>
+      </div>
+      <div class="radio inline">
+        <input type="radio" id="radio-3" name="platform" value="Playstation" />
+        <label for="radio-3" class="radio-label">Playstation</label>
+      </div>
+      <div class="radio inline">
+        <input type="radio" id="radio-4" name="platform" value="Switch" />
+        <label for="radio-4" class="radio-label">Switch</label>
+      </div>
+    </div>
+    <div class="form-group">
+      <label for="platform" class="text-light">Status</label>
+      <div class="radio inline">
+        <input type="radio" id="radio-5" name="status" value="In Stock" />
+        <label for="radio-5" class="radio-label">In Stock</label>
+      </div>
+      <div class="radio inline">
+        <input type="radio" id="radio-6" name="platform" value="Out of Stock" />
+        <label for="radio-6" class="radio-label">Out of Stock</label>
+      </div>
+    </div>
+
+    <div class="form-group">
+      <button type="submit" class="btn text-dark update">Save</button>
+    </div>
+  </div>
+</form>
